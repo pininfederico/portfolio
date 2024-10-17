@@ -1,0 +1,241 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0353a4, #0077B6, #48CAE4);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #0077B6, #48CAE4);
+    padding: 20px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.5s ease;
+}
+
+header:hover {
+    background: linear-gradient(135deg, #48CAE4, #00B4D8);
+}
+
+header .logo {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid white;
+}
+
+.header-image {
+    height: 100px;
+    width: auto;
+    margin-left: 20px;
+}
+
+.section-title, .section-header {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #0077B6, #48CAE4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 10px;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+    background: #CAF0F8;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 60%;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+table, th, td {
+    border: 1px solid #333;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #0077B6;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #CAF0F8;
+}
+
+tr:nth-child(odd) {
+    background-color: #90E0EF;
+}
+
+.gradient-divider {
+    height: 10px;
+    background: linear-gradient(135deg, #0077B6, #48CAE4);
+    margin: 20px 0;
+}
+
+footer {
+    background: linear-gradient(135deg, #0077B6, #03045E);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links a {
+    color: #CAF0F8;
+    text-decoration: none;
+    font-size: 2rem;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #90E0EF;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.instagram-icon {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png');
+}
+
+.spotify-icon {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg');
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.contact-form-container {
+    margin-left: 30px; /* Spazio tra i social e il form */
+    display: flex;
+    flex-direction: column;
+    text-align: left; /* Allinea il testo a sinistra */
+}
+
+.contact-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-container label {
+    margin-top: 10px; /* Spazio tra le etichette e i campi */
+}
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.1rem;
+    }
+
+    section {
+        padding: 40px 10px;
+        width: 90%;
+    }
+
+    table {
+        width: 90%;
+    }
+
+    .header-image {
+        height: 80px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-form-container {
+        margin-left: 0; /* Rimuovi lo spazio su schermi piccoli */
+        margin-top: 20px; /* Spazio sopra il modulo di contatto */
+    }
+}
