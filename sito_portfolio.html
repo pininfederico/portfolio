@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mormone Federico</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Instagram_icon.png/2048px-Instagram_icon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0353a4, #0077B6, #48CAE4);
+            background-size: 400% 400%;
+            animation: gradientBackground 15s ease infinite;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #0077B6, #48CAE4);
+            padding: 20px 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: background 0.5s ease;
+        }
+
+        header:hover {
+            background: linear-gradient(135deg, #48CAE4, #00B4D8);
+        }
+
+        header .logo {
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 600;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            border-bottom: 2px solid white;
+        }
+
+        .header-image {
+            height: 100px;
+            width: auto;
+            margin-left: 20px;
+        }
+
+        .section-title, .section-header {
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 10px;
+            color: white;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #0077B6, #48CAE4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding: 10px;
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+            background: #CAF0F8;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 1200px;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 60%;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        table, th, td {
+            border: 1px solid #333;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #0077B6;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #CAF0F8;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #90E0EF;
+        }
+
+        .gradient-divider {
+            height: 10px;
+            background: linear-gradient(135deg, #0077B6, #48CAE4);
+            margin: 20px 0;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #0077B6, #03045E);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 1.1rem;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-links {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-links a {
+            color: #CAF0F8;
+            text-decoration: none;
+            font-size: 2rem;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #90E0EF;
+        }
+
+        .social-icon {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-size: cover;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .instagram-icon {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png');
+        }
+
+        .spotify-icon {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg');
+        }
+
+        .social-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .contact-form-container {
+            margin-left: 30px; /* Spazio tra i social e il form */
+            display: flex;
+            flex-direction: column;
+            text-align: left; /* Allinea il testo a sinistra */
+        }
+
+        .contact-form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form-container label {
+            margin-top: 10px; /* Spazio tra le etichette e i campi */
+        }
+
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            nav ul li a {
+                font-size: 1.1rem;
+            }
+
+            section {
+                padding: 40px 10px;
+                width: 90%;
+            }
+
+            table {
+                width: 90%;
+            }
+
+            .header-image {
+                height: 80px;
+            }
+
+            .social-links {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .contact-form-container {
+                margin-left: 0; /* Rimuovi lo spazio su schermi piccoli */
+                margin-top: 20px; /* Spazio sopra il modulo di contatto */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Mormone Federico</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sudime">Su di me</a></li>
+                <li><a href="#esperienze">Esperienze</a></li>
+                <li><a href="#contatti">Contatti</a></li>
+            </ul>
+        </nav>
+        <img src="nome_co.jpg" alt="Foto di Federico Mormone" class="header-image">
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1 class="section-title">Benvenuti nel mio sito personale</h1>
+        <p>Sono Federico, uno studente del 5° anno di Informatica. Qui troverai le principali informazioni sulla mia vita, i miei interessi e il percorso che sto seguendo. Esplora il sito e scopri di più!</p>
+    </section>
+
+    <div class="gradient-divider"></div>
+
+    <!-- About Me Section -->
+    <section id="sudime">
+        <h2 class="section-header">Su di me</h2>
+        <p>Ciao, sono Federico Mormone, ho 18 anni e vengo da Santena (TO). Sono al 5º anno all'ITIS Pininfarina e sono appassionato di calcio e altri sport. Nel tempo libero mi piace uscire con gli amici oppure guardare video online (tutto legalmente). Mi reputo una persona molto simpatica e solare.</p>
+
+        <!-- Personal Information Table -->
+        <table>
+            <tr>
+                <th colspan="2">Informazioni personali</th>
+            </tr>
+            <tr>
+                <td>Nome</td>
+                <td>Federico Mormone</td>
+            </tr>
+            <tr>
+                <td>Età</td>
+                <td>18 anni</td>
+            </tr>
+            <tr>
+                <td>Scuola</td>
+                <td>ITIS Pininfarina</td>
+            </tr>
+            <tr>
+                <td>Residenza</td>
+                <td>Santena (TO)</td>
+            </tr>
+        </table>
+    </section>
+
+    <div class="gradient-divider"></div>
+
+    <!-- Extra -->
+    <section id="esperienze">
+        <h2 class="section-header">Esperienze Extrascolastiche</h2>
+        <p>Nell'anno scolastico 2023/2024 ho svolto il PCTO con l'azienda Sorint Lab. Quest'ultima è venuta qui a scuola a spiegarci e insegnarci alcune nozioni di base sulle macchine virtuali e la cybersecurity.</p>
+        <img src="sorint.png" alt="sorint">
+    </section>
+
+    <div class="gradient-divider"></div>
+
+    <!-- Contatti -->
+    <section id="contatti">
+        <h2 class="section-header">Contatti</h2>
+        <p>Se vuoi contattarmi, puoi inviarmi una mail a:</p>
+        <p><strong><a href="mailto:mormyfede@gmail.com" style="color: #0077B6; text-decoration: none;">mormyfede@gmail.com</a></strong></p>
+        <p>Puoi anche accedere a <a href="https://mail.google.com/" target="_blank" style="color: #0077B6; text-decoration: none;">Google Gmail</a> per inviare una mail.</p>
+    
+        <div class="social-links">
+            <p>Oppure seguimi su Instagram:</p>
+            <a href="https://www.instagram.com/_.fedee0_" target="_blank">
+                <div class="social-icon instagram-icon"></div>
+            </a>
+            <p>Ascolta la mia playlist su Spotify:</p>
+            <a href="https://open.spotify.com/playlist/37kVfS9ztXjT6hwDzVc9eK?si=AuOscd0jTRSZGCQDdsDRjw&pt=627c09b6dbd320411601c78553e74f5d&pi=e-Juoq391PShi7" target="_blank">
+                <div class="social-icon spotify-icon"></div>
+            </a>
+        </div>
+
+        <div class="contact-form-container">
+            <h3>Oppure inviami un messaggio:</h3>
+            <form action="submit_form.php" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required><br>
+                
+                <label for="cognome">Cognome:</label>
+                <input type="text" id="cognome" name="cognome" required><br>
+                
+                <label for="messaggio">Messaggio:</label><br>
+                <textarea id="messaggio" name="messaggio" rows="5" cols="40" required></textarea><br>
+                
+                <input type="submit" value="Invia">
+            </form>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Mormone Federico</p>
+    </footer>
+</body>
+</html>
